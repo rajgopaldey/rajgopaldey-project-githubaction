@@ -1,0 +1,10 @@
+ name: Greeting        # The workflow name
+
+on: push              # Trigger: Runs when code is pushed to the repository
+
+jobs:                 # A workflow consists of one or more jobs
+  greet:
+    runs-on: ubuntu-latest   # GitHub-hosted runner with Ubuntu OS
+    steps:                   # Each job has steps that run in sequence
+      - name: "greet user"   # Step name (description)
+        run: echo "Hello world!"   # Command to execute
